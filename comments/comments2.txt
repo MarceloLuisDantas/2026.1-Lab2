@@ -1,0 +1,5 @@
+ - Em suas soluções você sincronizou a execução das threads de tal forma que a thread principal esperasse a finalização de suas threads filhas. Ao implementar esta solução, você chegou a compartilhar algum espaço na memória (variável) entre as diferentes threads filhas e mãe? Se sim, qual? Isso pode levar a condições corridas? As múltiplas threads estão atualizando o mesmo espaço na memória? Temos algum problema na solução desenvolvida? Por que sim ou por que não?
+    - Todas as thredas possuem acesso de leitura e escrita a "Classes semester;" [main.c linha 163] a travez do uso de ponteiros entre as thredas.
+    - Sim, isso pode levar a condição de corrida caso process_grades() tentasse escrever em uma classe que não a passada por class_id.
+    - Mesmo as thredas tendo acesso a toda a estrutura de semester, cada uma se mantem apenas escrevendo na classe que le é responsavel.
+    - Não notei nem um problema de imediato, seria bom mudar process_grades recebesse diretamente o ponteiro para a sua classe, invês de receber todas as classes por segurança.

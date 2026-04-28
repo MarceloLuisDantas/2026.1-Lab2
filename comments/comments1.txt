@@ -1,0 +1,4 @@
+- Execução da solução serial: Execute algumas vezes a solução serial (para ambas as linguagens) e verifique seu comportamento através dos logs. Houve alguma alteração na ordem de execução das correções entre as diferentes execuções?
+    - Não ouve diferença na ordem de eventos entre as execuções
+
+    
